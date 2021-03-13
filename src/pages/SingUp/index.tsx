@@ -22,7 +22,7 @@ const SignUp: React.FC = () => {
             const schema = Yup.object().shape({
                 nome: Yup.string().required('Nome obrigatório'),
                 email: Yup.string().required('E-mail obrigatório').email('Digite um e-mail válido'),
-                password: Yup.string().min(6 , "senha no minimo 6 dígitos")
+                password: Yup.string().min(6 , 'senha no minimo 6 dígitos')
             });
 
             await schema.validate(data, {
