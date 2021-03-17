@@ -1,6 +1,6 @@
 import React, {useCallback, useRef} from 'react';
 import { FiLogIn, FiMail, FiLock, FiUser, FiArrowLeft } from 'react-icons/fi';
-import { FormHandles, FormProvider } from '@unform/core';
+import { FormHandles } from '@unform/core';
 import {Form} from '@unform/web';
 import * as Yup from 'yup';
 
