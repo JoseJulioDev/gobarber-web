@@ -15,6 +15,7 @@ interface SignInCredentials {
 interface AuthContentData {
     user: object;
     signIn(credentials: SignInCredentials): Promise<void>;
+    signOut(): void;
 }
 
 const AuthContent = createContext<AuthContentData>({} as AuthContentData);
@@ -49,8 +50,15 @@ export const AuthProvider:React.FC = ({children}) => {
         setData({token, user});
     }, []);
 
+    const signOut = useCallback(() => {
+        localStorage.removeItem('@GoBarber:token');
+        localStorage.removeItem('@GoBarber:user');
+
+        setData({} as AuthState);
+    }, []);
+
     return(
-        <AuthContent.Provider value={{user: data.user, signIn}}>
+        <AuthContent.Provider value={{user: data.user, signIn, signOut}}>
             {children}
         </AuthContent.Provider>
     );
