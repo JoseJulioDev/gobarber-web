@@ -3,8 +3,10 @@ gobarber-web-gostack is an application focused on applying knowledge of react js
  * Axios.
  * LocalStorage.
  * React-Spring.
+ * React router dom.
 
 gobarber-web-gostack é uma aplicação com o foco em aplicar conhecimentos de react js.
  * styled components.
  * LocalStorage.
  * React-Spring.
+ * React router dom.
